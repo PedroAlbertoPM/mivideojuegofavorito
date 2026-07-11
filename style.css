@@ -1,3 +1,190 @@
-footer {
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL Y DISEÑO BASE
+   ========================================== */
+body {
+    background-color: #060606;
+    /* Un degradado sutil en el fondo para dar una atmósfera oscura y profunda */
+    background-image: radial-gradient(circle at top, #120202 0%, #060606 70%);
+    color: #e0e0e0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido horizontalmente en la pantalla */
+    min-height: 100vh;
+}
 
+/* Contenedor principal que envuelve todo para controlar los márgenes en pantallas grandes */
+main {
+    width: 90%;
+    max-width: 800px; /* Ancho óptimo para una lectura cómoda y centrada */
+    padding: 20px 0 60px 0;
+}
+
+/* ==========================================
+   2. ENCABEZADOS Y TEXTOS
+   ========================================== */
+header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    color: #dd2222;
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Efecto de brillo de terror sutil en las letras */
+    text-shadow: 0 0 10px rgba(221, 34, 34, 0.3);
+}
+
+h2 {
+    color: #8a8a8a;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+/* Resaltado del RE Engine */
+b {
+    color: #ff4444;
+}
+
+/* ==========================================
+   3. SECCIONES DE IMÁGENES Y PROGRESO
+   ========================================== */
+#contenedor-imagen, 
+#contenedor-progreso {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+    width: 100%;
+}
+
+/* Estilo unificado para la portada y la captura de progreso */
+.img-portada,
+.img-progreso {
+    width: 100%;
+    max-width: 550px; /* Evita que las capturas se estiren demasiado */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(221, 34, 34, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto visual cuando pasas el mouse por encima de las imágenes principales */
+.img-portada:hover,
+.img-progreso:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================================
+   4. SECCIÓN NUEVA: TARJETAS DE PERSONAJES
+   ========================================== */
+#seccion-personajes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 45px;
+    width: 100%;
+}
+
+.tarjeta-personaje {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    background-color: #0f0f0f;
+    border: 1px solid #1a1a1a;
+    border-left: 4px solid #8b0000; /* Borde rojo característico en el lateral izquierdo */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta-personaje img {
+    width: 130px;
+    height: 165px;
+    object-fit: cover; /* Recorta la imagen para que encaje perfectamente sin deformarse */
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.info-personaje {
+    flex: 1;
+}
+
+.info-personaje p {
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+}
+
+/* Quita el margen inferior al último párrafo de la tarjeta */
+.info-personaje p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   5. PIE DE PÁGINA
+   ========================================== */
+footer {
+    background-color: #3a0202;
+    background-image: linear-gradient(to right, #1f0101, #3a0202, #1f0101);
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: auto; /* Empuja el footer siempre al fondo de la pantalla */
+    border-top: 1px solid #570303;
+}
+
+.texto-footer {
+    margin: 0;
+    color: #ffffff;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+#btn-eliminar {
+    background-color: #570303;
+    color: #ffffff;
+    border: 1px solid #dd2222;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#btn-eliminar:hover {
+    background-color: #dd2222;
+    box-shadow: 0 0 10px rgba(221, 34, 34, 0.5);
+}
+
+/* ==========================================
+   6. RESPONSIVE DESIGN (Para celulares)
+   ========================================== */
+@media (max-width: 600px) {
+    .tarjeta-personaje {
+        flex-direction: column; /* En pantallas chicas, la foto se pone arriba del texto */
+        text-align: center;
+    }
+    
+    .tarjeta-personaje img {
+        width: 120px;
+        height: 150px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
 }

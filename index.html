@@ -15,24 +15,53 @@
     </header>
 
     <main>
-        <div style="display: flex; gap: 30px; align-items: center; margin-bottom: 25px; max-width: 1100px;">
-            <img src="residentevil2.png" alt="Portada de Resident Evil 2 Remake" style="width: 45%; height: auto;">
+        <div id="contenedor-imagen">
+            <img src="residentevil2.png" alt="Portada de Resident Evil 2 Remake" class="img-portada">
         </div>
 
-        <p style="font-size: 18px; margin-bottom: 15px;">Resident Evil 2 Remake es un juego de terror y acción desarrollado por Capcom.</p>
+        <p>Resident Evil 2 Remake es un juego de terror y acción desarrollado por Capcom.</p>
         
-        <p style="font-size: 18px;">Este título es un claro parteaguas en la serie de videojuegos survival horror.</p>
-        <p style="font-size: 18px; margin-bottom: 15px;">No solo porque lleva el horror al siguiente nivel, sino que también nos trae unas espectaculares vistas gracias al motor <b>RE engine.</b></p>
+        <p>Este título es un claro parteaguas en la serie de videojuegos survival horror.</p>
+        <p>No solo porque lleva el horror al siguiente nivel, sino que también nos trae unas espectaculares vistas gracias al motor <b>RE engine.</b></p>
         
-        <p style="font-size: 18px; margin-bottom: 15px;">Este título lo tengo al 74% pero lo quiero completar en un futuro porque simplemente es mi título favorito.</p>
+        <p>Este título lo tengo al 74% pero lo quiero completar en un futuro porque simplemente es mi título favorito.</p>
         
-        <div style="display: flex; gap: 30px; align-items: center; margin-bottom: 25px; max-width: 1100px;">
-            <img src="progreso.png" alt="Captura del progreso del juego al 74%" style="width: 50%; height: auto;">
+        <div id="contenedor-progreso">
+            <img src="progreso.png" alt="Captura del progreso del juego al 74%" class="img-progreso">
         </div>
+
+        <!-- Sección de los protagonistas corregida -->
+        <div id="seccion-personajes">
+            
+            <!-- Tarjeta de Leon -->
+            <div class="tarjeta-personaje">
+                <img src="Leon.png" alt="Leon Kennedy">
+                <div class="info-personaje">
+                    <p><strong>Leon S. Kennedy</strong> es un policía novato que vive una de las peores tragedias de su vida.</p>
+                    <p>Tras su llegada a su primer día como policía en la ciudad de Raccoon City, se entera de la gran tragedia que azotó a la ciudad y de la cantidad de enemigos a los que tendrá que enfrentarse.</p>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de Claire -->
+            <div class="tarjeta-personaje">
+                <img src="Claire.png" alt="Claire Redfield">
+                <div class="info-personaje">
+                    <p><strong>Claire Redfield</strong> es la hermana del oficial de la fuerza especial S.T.A.R.S. Chris Redfield.</p>
+                    <p>Está en búsqueda de su hermano perdido, ya que no se había comunicado con él durante bastante tiempo.</p>
+                    <p>Sus sospechas la llevan a Raccoon City, donde descubrirá que él está desaparecido en Europa tras perseguir a la compañía Umbrella. Claire deberá enfrentarse a los peores enemigos para poder sobrevivir y encontrar a su hermano.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="contador-zona">
+         <p>Zombis eliminados en mis partidas: <span id="contador-zombis">317</span></p>
+        <button id="btn-eliminar">¡Eliminar Zombi!</button>
+    </div>
     </main>
 
     <footer id="footer">
-        <p>Proyecto 1 - Pedro Alberto Pérez Medellín</p>
+        <p class="texto-footer">Proyecto 1 - Pedro Alberto Pérez Medellín</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
