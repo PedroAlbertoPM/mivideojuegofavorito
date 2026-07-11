@@ -170,9 +170,6 @@ footer {
     box-shadow: 0 0 10px rgba(221, 34, 34, 0.5);
 }
 
-/* ==========================================
-   6. RESPONSIVE DESIGN (Para celulares)
-   ========================================== */
 @media (max-width: 600px) {
     .tarjeta-personaje {
         flex-direction: column; /* En pantallas chicas, la foto se pone arriba del texto */
